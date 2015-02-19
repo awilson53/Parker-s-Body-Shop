@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Parker_s_Body_Shop.Models.ContactViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SMTPUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SMTPUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SMTPPass)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SMTPUrl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SMTPUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SMTPPass)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ContactViewModelId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ContactViewModelId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ContactViewModelId })
+        </td>
+    </tr>
+}
+
+</table>
