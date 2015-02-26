@@ -15,10 +15,6 @@ function initialize() {
         title: 'Parker\'s Body Shop',
         animation: google.maps.Animation.DROP
     })
-
-    loadMapWidget();
 }
 
-function loadMapWidget() {
-    google.maps.event.addDomListener(window, 'load', initialize);
-}
+google.maps.event.addDomListener(window, 'load', initialize);

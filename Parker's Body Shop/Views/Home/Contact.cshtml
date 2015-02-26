@@ -1,11 +1,6 @@
 ﻿
-@***Scripts.Render("https://maps.googleapis.com/maps/api/js") **@
-
-<script src="https://maps.googleapis.com/maps/api/js"></script>
-<script src="~/Scripts/googleMaps.js"></script>
-<script>
-    initialize();
-</script>
+@Scripts.Render("https://maps.googleapis.com/maps/api/js")
+@Scripts.Render("~/Scripts/googleMaps.js")
 
 @{
     ViewBag.Title = "Contact";
@@ -22,5 +17,8 @@
     803.222.9112
 </address>
 
-<div id="map-canvas">       
+<div id="map-canvas">
+
+<p><h4>Prefer to contact by email?  Please submit your request below and we will respond to you as soon as possible.</h4></p>
+
 </div>
