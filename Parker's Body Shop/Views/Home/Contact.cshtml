@@ -1,4 +1,4 @@
-﻿
+﻿@model Parker_s_Body_Shop.Models.ContactRequestViewModel
 @Scripts.Render("https://maps.googleapis.com/maps/api/js")
 @Scripts.Render("~/Scripts/googleMaps.js")
 
@@ -18,7 +18,28 @@
 </address>
 
 <div id="map-canvas">
-
-<p><h4>Prefer to contact by email?  Please submit your request below and we will respond to you as soon as possible.</h4></p>
-
 </div>
+
+<p><h4>Prefer that we contact you?  Please submit your request below and we will respond to you as soon as possible.</h4></p>
+
+@using(Html.BeginForm("SubmitContact", "Home", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(model => model.FirstName)
+        @Html.EditorFor(model => model.FirstName)
+    </div>
+    
+    <div>
+        @Html.LabelFor(model => model.LastName)
+        @Html.EditorFor(model => model.LastName)
+    </div>
+
+    @Html.LabelFor(model => model.Email)
+    @Html.EditorFor(model => model.Email)
+    
+    @Html.LabelFor(model => model.PhoneNumber)
+    @Html.EditorFor(model => model.PhoneNumber)
+    
+    @Html.LabelFor(model => model.Message)
+    @Html.EditorFor(model => model.Message)
+}
