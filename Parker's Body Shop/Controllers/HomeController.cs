@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -23,8 +24,20 @@ namespace Parker_s_Body_Shop.Controllers
         [HttpPost]
         public ActionResult SubmitContact(ContactRequestViewModel contactInfo)
         {
-            
-            return View(contactInfo);
+            try
+            {
+                WebMail.SmtpServer = ConfigurationManager.AppSettings["SMTPUrl"];
+                WebMail.SmtpPort = Convert.ToInt32(ConfigurationManager.AppSettings["SMTPPort"]);
+                WebMail.UserName = ConfigurationManager.AppSettings["SMPTUser"];
+                WebMail.Password = ConfigurationManager.AppSettings["SMTPPass"];                
+
+                return View();
+
+            }
+            catch(Exception ex)
+            {
+
+            }
         }
     }
 }
