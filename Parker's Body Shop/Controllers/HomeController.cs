@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Helpers;
 using Parker_s_Body_Shop.Models;
 
 namespace Parker_s_Body_Shop.Controllers
@@ -22,8 +23,7 @@ namespace Parker_s_Body_Shop.Controllers
         [HttpPost]
         public ActionResult SubmitContact(ContactRequestViewModel contactInfo)
         {
-
-
+            
             return View(contactInfo);
         }
     }
