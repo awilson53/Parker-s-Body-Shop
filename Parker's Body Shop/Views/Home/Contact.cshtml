@@ -20,26 +20,36 @@
 <div id="map-canvas">
 </div>
 
-<p><h4>Prefer that we contact you?  Please submit your request below and we will respond to you as soon as possible.</h4></p>
+<div><h4>Prefer that we contact you?  Please submit your request below and we will respond to you as soon as possible.</h4></div>
 
-@using(Html.BeginForm("SubmitContact", "Home", FormMethod.Post))
+@using(Html.BeginForm("SubmitContact", "Home", FormMethod.Post, new { @class="form-group" } ))
 {
-    <div>
-        @Html.LabelFor(model => model.FirstName)
-        @Html.EditorFor(model => model.FirstName)
-    </div>
+    <div class="container">
+        <div class="form-group">            
+            @Html.LabelFor(model => model.FirstName)                     
+            @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control" })
+        </div>
     
-    <div>
-        @Html.LabelFor(model => model.LastName)
-        @Html.EditorFor(model => model.LastName)
-    </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.LastName)
+            @Html.TextBoxFor(model => model.LastName, new { @class = "form-control" })
+        </div>
 
-    @Html.LabelFor(model => model.Email)
-    @Html.EditorFor(model => model.Email)
-    
-    @Html.LabelFor(model => model.PhoneNumber)
-    @Html.EditorFor(model => model.PhoneNumber)
-    
-    @Html.LabelFor(model => model.Message)
-    @Html.EditorFor(model => model.Message)
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email)
+            @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+        </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.PhoneNumber)
+            @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Message)
+            @Html.TextAreaFor(model => model.Message, new { @class = "form-control", rows="3" })
+        </div>
+
+        <button type="submit" class="btn btn-default">Submit</button>
+    </div>
 }
