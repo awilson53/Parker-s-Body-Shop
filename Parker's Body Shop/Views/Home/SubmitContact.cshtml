@@ -1,8 +1,23 @@
 ﻿@model Parker_s_Body_Shop.Models.ContactRequestViewModel
 @{
     ViewBag.Title = "SubmitContact";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";        
 }
 
 <h2>SubmitContact</h2>
 
+@{
+    string error = ViewBag.ErrorMessage;
+    string stack = ViewBag.StackTrace;
+    if (error.Length > 0)
+    {
+        <div>
+            <h3>Error In WebMail Send</h3>
+        </div>
+        <div>@error</div>
+        <div>
+            <h3>Stack Trace</h3>
+        </div>
+        <div>@stack</div>
+    }
+}
