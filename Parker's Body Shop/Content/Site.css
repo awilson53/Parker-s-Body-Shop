@@ -28,3 +28,8 @@ textarea {
     width: 500px;
     height: 400px;
 }
+
+/* fix for carousel images not being centered */
+.carousel-inner > .item > img {
+    margin: 0 auto;
+}
