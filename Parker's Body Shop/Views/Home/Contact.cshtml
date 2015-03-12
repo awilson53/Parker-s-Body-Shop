@@ -20,9 +20,9 @@
 <div id="map-canvas">
 </div>
 
-<div><h4>Prefer that we contact you?  Please submit your request below and we will respond to you as soon as possible.</h4></div>
+<div style="display: none;"><h4>Prefer that we contact you?  Please submit your request below and we will respond to you as soon as possible.</h4></div>
 
-@using(Html.BeginForm("SubmitContact", "Home", FormMethod.Post, new { @class="form-group" } ))
+@using(Html.BeginForm("SubmitContact", "Home", FormMethod.Post, new { @class="form-group", hidden="true" } ))
 {
     <div class="container">
         <div class="form-group">            
