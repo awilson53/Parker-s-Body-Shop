@@ -26,6 +26,12 @@ namespace Parker_s_Body_Shop
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/bundles/galleryjs").Include(
+                "~/Scripts/bootstrap-image-gallery.js"));
+
+            bundles.Add(new StyleBundle("~/bundles/gallerycss").Include(
+                "~/Content/bootstrap-image-gallery.css"));
         }
     }
 }
