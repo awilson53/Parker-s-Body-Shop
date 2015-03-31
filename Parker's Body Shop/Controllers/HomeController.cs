@@ -23,6 +23,11 @@ namespace Parker_s_Body_Shop.Controllers
             return View();
         }
 
+        public ActionResult Showcase()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult SubmitContact(ContactRequestViewModel contactInfo)
         {

@@ -235,6 +235,7 @@
     <Content Include="Views\ContactViewModels\Edit.cshtml" />
     <Content Include="Views\ContactViewModels\Index.cshtml" />
     <Content Include="Views\Home\SubmitContact.cshtml" />
+    <Content Include="Views\Home\Showcase.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
