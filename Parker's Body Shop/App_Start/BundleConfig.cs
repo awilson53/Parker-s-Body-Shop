@@ -23,14 +23,16 @@ namespace Parker_s_Body_Shop
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/galleryjs").Include(
+                "~/Scripts/jquery.blueimp-gallery.min.js",
+                "~/Scripts/bootstrap-image-gallery.js"));          
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
-
-            bundles.Add(new StyleBundle("~/bundles/galleryjs").Include(
-                "~/Scripts/bootstrap-image-gallery.js"));
+                      "~/Content/site.css"));                        
 
             bundles.Add(new StyleBundle("~/bundles/gallerycss").Include(
+                "~/Content/blueimp-image-gallery.min.css",
                 "~/Content/bootstrap-image-gallery.css"));
         }
     }
