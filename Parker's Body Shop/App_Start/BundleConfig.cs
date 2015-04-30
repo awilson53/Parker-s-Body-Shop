@@ -32,7 +32,7 @@ namespace Parker_s_Body_Shop
                       "~/Content/site.css"));                        
 
             bundles.Add(new StyleBundle("~/bundles/gallerycss").Include(
-                "~/Content/blueimp-image-gallery.min.css",
+                "~/Content/blueimp-gallery.min.css",
                 "~/Content/bootstrap-image-gallery.css"));
         }
     }

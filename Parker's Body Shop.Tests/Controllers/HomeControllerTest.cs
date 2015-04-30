@@ -36,6 +36,6 @@ namespace Parker_s_Body_Shop.Tests.Controllers
 
             // Assert
             Assert.IsNotNull(result);
-        }
+        } 
     }
 }
